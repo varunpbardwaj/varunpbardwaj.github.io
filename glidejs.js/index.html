@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Glide.js</title>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<meta name="theme-color" content="#111111">
+<link rel='icon' href='logo.png'>
+<link rel="stylesheet" href="glidejs.css">
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id='glide'>
+<section id='glideone' class='glideSlide'>
+<div class='glideContent'>Glide.js is a small JavaScript library to create full screen glides with few lines of code.<br><br>
+Go through other glides for Documentation.<br><br>
+</div>
+</section>
+<section id='glidetwo' class='glideSlide'>
+<div class='glideContent'>Click on below button to copy CDN and include them in the &ltbody&gt section, after all other Scripts.<br><br><br><button class='btncopy' onclick='copy()'>COPY CDN</button><br><br><br>
+<div class='codes'>
+&ltscript&gt<br>
+.........<br>
+.........<br>
+&lt/script&gt<br><br>
+&ltscript src='glide.js'&gt &lt/script&gt</div>
+<div id='copy'>https://cdn.jsdelivr.net/npm/glidejs.lib@1.0.3/dist/glide.js</div>
+</div>
+</section>
+<section id='glidethree' class='glideSlide'>
+<div class='glideContent'>How to use Glide.js ?
+<br><br><br>
+<div class='codes'>
+&ltdiv id='glide'&gt<br>
+&ltsection class='glideSlide' id='first_glide_id'&gt<br>
+&ltdiv class='glideContent'&gt<br>
+..............<br>
+&lt/div&gt<br>
+&lt/section&gt<br><br>
+&ltsection class='glideSlide' id='second_glide_id'&gt<br>
+&ltdiv class='glideContent'&gt<br>
+..............<br>
+&lt/div&gt<br>
+&lt/section&gt<br>
+&lt/div&gt<br><br><br>
+</div>
+Use the above template for declaring divs and section. The outer div id should be 'glide'. You should declare the section class as 'glideSlide' and id of any name. All the section contents should be declared within a div with id 'glideContent. Head over to next glide for &ltscript&gt linking. All the ids and classes are mandatory.</div>
+</section>
+
+<section id='glidefour' class='glideSlide'>
+	
+<div class='glideContent'>How to use Glide.js ?<br><br><br>
+<div class='codes'>
+&ltscript&gt<br>
+var glides =  ['first_glide_id', 'second_glide_id'];<br>
+var tooltip = ['your_tooltip_first_glide', 'your_tooltip_second_glide'];<br>
+&lt/script&gt<br><br>
+&ltscript src='glide.js'&gt &lt/script&gt</div><br><br>
+Declare the ids of the sections in array 'glides' and declare the tooltips for the glides dots(bottom) in the array 'tooltip'. Hover on the dots for tooltip. </div>
+
+</section>	
+<section id='glidefive' class='glideSlide'>
+<div class="glideContent">
+Customization :<br><br>
+1. #next - for customizing the next glide  button(>).<br>
+2. #previous - for customizing the previous glide  button(<).<br>
+3. #dots + 'your id for sections' - for customizing the dots(bottom).<br>
+4. #tooltipspan - for customizing the dots tooltip.<br><br>
+Eg:<br><br>
+<pre class="codes">
+#next, #previous{
+color:rgba(1,1,1,0.5) !important;
+}
+#next:hover, #previous:hover{
+color:rgba(1,1,1,1) !important;
+}
+#dotsglideone, #dotsglidetwo, #dotsglidethree, #dotsglidefour{
+background:rgba(1,1,1,0.5) !important;
+}
+#dotsglideone:hover, #dotsglidetwo:hover, #dotsglidethree:hover, #dotsglidefour:hover{
+background:rgba(1,1,1,1) !important;
+}
+#tooltipspan{
+color:rgba(1,1,1,0.5) !important;
+}<pre>
+
+</div>
+</section>
+<section id='glidesix' class='glideSlide'>
+<div class='glideContent'><pre>Navigation :
+	
+1. Using Next(>) and Previous(<) button.
+2. Using Dots in the bottom.
+3. Using Left arrow and Right arrow keys.
+</pre></div>
+</section>	
+</div>
+
+
+<div class='header notselected'>
+<span class='logo'>Glide.js</span>
+<a href='https://github.com/varunpbardwaj/glide.js' target='_blank'><i class='fa fa-github'></i></a>
+<a href='https://github.com/varunpbardwaj/glide.js/archive/refs/heads/main.zip' ><i class='fa fa-download'></i></a>
+</div>
+
+<script src="glidejs.js"></script>
+<script src="https://glidejs.bitbucket.io/glide.js"></script>
+</body>
+</html>

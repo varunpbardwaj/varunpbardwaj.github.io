@@ -1,0 +1,677 @@
+html{
+scroll-behavior: auto;
+transition-duration: 2000ms;
+}
+#cdn{
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+*{
+font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
+
+::-webkit-scrollbar {
+width: 4.2px;
+height:4.2px;
+background: #fafafa;
+}
+
+::-webkit-scrollbar-track {
+background: #fafafa; 
+border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+background: #1e90ff; 
+}
+::-webkit-scrollbar-thumb:hover {
+background: #1c86ea; 
+}
+
+video{
+width: 100%;
+height: auto;
+}
+.outerholder{
+position: absolute;
+top:100%;
+left:100%;
+margin-top: -5px;
+margin-left: -5px;
+transform: translate(-100%, -100%);
+width:220px;
+height:120px;
+opacity: 0.9;
+display:none;
+border-radius: 4px;
+}
+.cancel{
+margin:0;
+position: absolute;
+top:5px;
+right:5px;
+font-size: 20px;
+color:#1e90ff;
+font: weight 600;
+cursor: pointer;
+}
+
+pre{
+border-right: 1pt solid grey;
+}
+.codes{
+font-size: 18px;
+}
+#showvideo{
+text-decoration: underline;
+text-underline-position: under;
+color:#1476d1;
+font-weight: 600;
+cursor: pointer;
+}
+#showvideo:hover{
+text-decoration: underline;
+text-underline-position: under;
+color:#1163b1;
+}
+#translater{
+margin-top:-5px;
+position: fixed;
+width:100%;
+background:#dadada;
+height:50px;
+padding-left: 64px;
+}
+.goog-te-combo{
+font-size: 16px;
+font-weight: 600;
+color: black;
+width:170px;
+height:42px;
+border: none;
+background:rgba(0,0,0,0);
+display: inline;
+cursor: pointer;
+}
+.goog-te-combo:focus{outline:none;}
+.goog-te-banner-frame.skiptranslate {
+display: none !important;
+} 
+body{
+top: 0px !important; 
+background: #ededed !important;
+}
+.goog-logo-link {
+display:none !important;
+} 
+
+.goog-te-gadget{
+color: transparent !important;
+}
+.powered{
+position: fixed;
+top:20px;
+width:100%;
+margin-left: 280px;
+padding-left: 50px;
+height:50px;
+font-size: 15px;
+font-weight: 600;
+color:black;
+display: flex;
+align-items: center;
+}
+.google{
+width:16px;
+height:16px;
+}
+.copyholder{
+font-size: 17px;
+}
+#getext{
+font-size: 17px;	
+}
+body{
+width: 100%;
+height: 100vh;
+background: #fefefe;
+-webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+background: #fafafa;
+}
+button{
+font-size: 18px;
+}
+
+
+.top-menu ul{
+list-style: none;
+}
+
+.nav-links{
+margin-top: 70px;
+font-weight: 600;
+}
+
+.vBocx{
+font-size: 25px;
+text-decoration: underline;
+text-underline-position: under;
+padding-bottom:10px;
+margin-bottom: 60px;    
+}
+.vBocx span{
+-webkit-text-stroke: 1.2px #1e90ff;	
+color: white;
+}
+
+nav-links{
+cursor: pointer;
+}
+
+.nav-links li .gtgs{
+text-decoration: none;
+color:#212121;
+}
+
+.social-icons{
+position: absolute;
+width:100%;
+height:50px;
+bottom: 0;
+background: black;
+display:flex;
+align-items: center;
+justify-content: center;
+padding-top:5px;
+}
+
+.social-icons .fa{
+font-size:20px;
+color:white;
+cursor: pointer;
+transition: 0.4s;
+}
+
+.social-icons a span{
+font-size:18px;
+padding-left: 18px;
+}
+
+.social-icons .fa:hover{
+font-size:20px;
+color:#47a6ff;
+cursor: pointer;
+transition: 0.4s;
+}
+
+.main-body{
+margin-left:240px;
+color :black;
+background: #fafafa;
+display:block;
+align-items:center;
+overflow: auto;
+height: 100vh;
+box-shadow: 0px 0.2px 0.8px rgba(1,1,1,0.3);
+}
+.holder{
+margin-top: 40px;
+text-align:left;
+padding-left: 70px;
+padding-right: 70px;
+}
+
+body{
+font-size: 20px;
+}
+
+#getext{
+width:auto;
+padding-left: 5px;
+background: #fbfbfb;
+resize: none;
+display:inline-block;
+text-align: left;
+border-left:2pt solid #1277db;
+margin-bottom: 15px;
+}
+
+.bottom{
+position: absolute;
+color:#ababab;
+padding-left: 70px;
+padding-right: 70px;
+bottom:5px;
+transition: 0.5s;	
+}
+
+.getcdn{
+cursor: copy;
+}
+
+.runex{
+cursor: pointer;
+}
+
+.bold{
+font-weight: 600;
+}
+
+
+.include{
+font-size: 20px;
+font-weight: 600;
+}
+
+.vBocxjs{
+font-weight: normal;
+}
+
+.illustratecdn{
+border-radius: 4px;
+overflow: auto;
+}
+
+.getextt{
+background: #efefef;
+padding-top: 10px;
+padding:10px;
+border-radius: 4px;
+overflow: auto;
+}
+
+#getext{
+position: absolute;
+width: 0px;
+opacity: 0;
+}
+
+.exampleheading{
+display: inline-flex;
+}
+
+#copyholder{
+display: inline-flex;
+}
+
+#copy{
+margin-left: 20px;
+}
+.illustratecdn1{
+border-radius: 4px;
+overflow: auto;
+}
+
+.illustratecdn2{
+border-radius: 4px;
+overflow: auto;
+}
+
+.tholder{
+display: inline-flex;
+}
+#vBocx{
+font-size: 17px;
+}
+.docheading{
+font-size: 20px;
+font-weight: 600;
+margin-bottom:20px;
+}
+
+.li{
+margin-bottom:10px;
+font-size:18px;
+}
+html{
+scroll-behavior: auto;
+transition-duration: 2000ms;
+}
+
+body{
+overflow-x: hidden;
+width: 100%;
+height: 100%;
+}
+.header-white{
+position: fixed;
+height: 50px;
+width: 100%;
+box-shadow: none !important;
+background: #fafafa !important;
+border-bottom: 1pt solid #aaaaaa;
+}
+.brand{
+padding-left: 70px;
+padding-top:8px;
+font-size: 25px;
+display: flex;
+align-items: center;
+}
+
+.top-menu{
+color :black;
+height:240px;
+background: #f9f9f9;
+transition: 1s;
+top:-130px;
+width:100%;
+border-bottom: 1pt solid #aaaaaa;
+}
+.main-body{
+overflow-x: hidden;
+margin-left: 0px;
+}
+
+.toogle .fa{
+position:fixed;
+font-size:25px;
+transition: 0.5s;
+top:12px;
+right:70px;
+}
+
+.nav-links{
+padding-left: 70px;
+cursor: pointer;
+}
+
+
+.nav-links li{
+font-size: 17px;
+margin-top: 20px;
+}
+
+.brand{
+font-size: 25px;  
+}
+
+.brand span{
+-webkit-text-stroke: 1.2px #1e90ff; 
+color: white;
+}
+
+button{
+font-size: 17px;
+}
+.holder{
+padding-top: 40px;
+}
+
+#translater{
+margin-top:50px;
+position: fixed;
+width:100%;
+background:#efefef;
+height:50px;
+padding-left: 17px;
+}
+.goog-te-combo{
+font-size: 13px;
+font-weight: 600;
+color: black;
+width:145px;
+height:42px;
+border: none;
+background:rgba(0,0,0,0);
+border-radius: 4px;
+padding-left: 10px;
+display: inline;
+}
+.goog-te-combo:focus{outline:none;}
+.goog-te-banner-frame.skiptranslate {
+display: none !important;
+} 
+body {
+top: 0px !important; 
+}
+.goog-logo-link {
+display:none !important;
+} 
+
+.goog-te-gadget{
+color: transparent !important;
+}
+.powered{
+position: fixed;
+top:75px;
+width:100%;
+margin-left: 143px;
+height:50px;
+font-size: 12px;
+font-weight: 600;
+color:black;
+display: flex;
+align-items: center;
+}
+.google{
+width: 16px;
+height: 16px;
+}
+#vBocx{
+font-size: 12px;
+}
+.outerholder{
+position: absolute;
+top:100%;
+left:100%;
+margin-top: -5px;
+margin-left: -5px;
+transform: translate(-100%, -100%);
+width:220px;
+height:120px;
+opacity: 0.9;
+display:none;
+border-radius: 4px;
+}
+footer{
+background:#ffffff00;
+color:#121212;
+height:50px;
+width:100%;
+display:flex;
+justify-content: center;
+align-items: center;
+font-size:10px;
+bottom: 0;
+}
+
+@media screen and (min-width : 320px) and (max-width : 1200px){
+body{
+overflow-x: hidden;
+width: 100%;
+height: 100vh;
+font-size: 17px;
+padding: 0px;
+}
+#vBocx{
+font-size: 17px; 
+}
+.getcdn{
+font-size: 17px;
+}
+.header-white{
+display:flex;
+border-bottom: 1pt solid black;
+}
+.brand{
+font-size: 25px;
+display: flex;
+align-items: center;
+padding-left: 30px;
+padding-top: 0px;
+}
+
+.main-body{
+overflow-x: hidden;
+margin-left: 0px;
+}
+
+.holder{
+padding:30px;
+}
+
+.toogle .fa{
+position: absolute;
+top: 25%;
+font-size:25px;
+right:0px;
+transition: 0.7s;
+right:30px;
+}
+
+.vBocx{
+display: none;
+}
+
+.nav-links{
+cursor: pointer;
+}
+
+.brand{
+font-size: 25px;
+ 
+}
+
+.brand span{
+
+-webkit-text-stroke: 1.2px #1e90ff;	
+color: white;
+}
+
+button{
+font-size: 17px;
+}
+.holder{
+padding-top: 40px;
+}
+::-webkit-scrollbar {
+width: 2px;
+height:2px;
+background: white;
+}
+
+::-webkit-scrollbar-track {
+background: white; 
+border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+background: #1e90ff; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #1c86ea; 
+}
+.maincontent .name, .include{
+font-size: 17px;
+}
+#translater{
+margin-top:50px;
+position: fixed;
+width:100%;
+background:#efefef;
+height:50px;
+padding-left: 17px;
+}
+.goog-te-combo{
+
+font-size: 13px;
+font-weight: 600;
+color: black;
+width:145px;
+height:42px;
+border: none;
+background:rgba(0,0,0,0);
+border-radius: 4px;
+padding-left: 10px;
+display: inline;
+}
+.goog-te-combo:focus{outline:none;}
+.goog-te-banner-frame.skiptranslate {
+display: none !important;
+} 
+body {
+top: 0px !important; 
+}
+.goog-logo-link {
+display:none !important;
+} 
+
+.goog-te-gadget{
+color: transparent !important;
+}
+.powered{
+position: fixed;
+top:75px;
+width:100%;
+margin-left: 143px;
+height:50px;
+font-size: 12px;
+font-weight: 600;
+color:black;
+display: flex;
+align-items: center;
+}
+.google{
+width: 16px;
+height: 16px;
+}
+#vBocx{
+font-size: 12px;
+}
+.codes{
+font-size: 13px;
+}
+.outerholder{
+position: absolute;
+top:100%;
+left:100%;
+margin-top: -5px;
+margin-left: -5px;
+transform: translate(-100%, -100%);
+width:220px;
+height:120px;
+opacity: 0.9;
+display:none;
+border-radius: 4px;
+}
+
+footer{
+background:#ffffff00;
+color:#121212;
+height:50px;
+width:100%;
+display:flex;
+justify-content: center;
+align-items: center;
+font-size:10px;
+bottom: 0;
+}
+.nav-links{
+padding-left: 30px !important;
+}
+.nav-links li{
+font-size:14px !important;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

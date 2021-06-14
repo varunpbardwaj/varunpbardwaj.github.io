@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title class='notranslate'>vBocx.js</title>
+<link href='prism.css' rel='stylesheet' />
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/vbocxjs.lib@1.0.2/dist/vbocx.css'>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/vbocxjs.lib@1.0.2/dist/vbocx.js'></script> 
+<link rel='stylesheet' href='vBocxStyleLocale.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<link rel='icon' href='logo.png'>
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class='main-body box-sdw-2' id='main-body'>
+<div class='top-menu trans-t-50 notranslate' id='top-menu'>
+<ul class='nav-links'>
+<li ><a class='gtgs' href='gettingStarted.html'>Getting Started</a></li>
+<li ><a class='gtgs' href='documentation.html'>Documentation</a></li>	
+<li ><a class='gtgs' href='https://github.com/varunpbardwaj/vbocx.js/archive/refs/heads/main.zip' download>Download</a></li>
+<li><a class='gtgs' href='https://github.com/varunpbardwaj/vbocx.js' target='_blank'><i class='fa fa-github'></i></a></li>
+
+</ul>
+
+</div>
+<div class='header-white' id="header-white">
+<div class='brand notranslate'>vBocx.<span>js</span></div>
+<div class='toogle notranslate' id='toogle'><i id='fa' class='fa fa-bars'></i></div>
+</div>
+
+<div class='holder'>
+<div class='maincontent fg-black'>
+vBocx.js is a JavaScript Library.<br>It creates alertboxes, promptboxes and confirmboxes in just few lines of code.
+</div><br><br>
+
+<div class='nextcontent fg-black'>
+It uses CSS and JavaScript.<br>
+Read our Documentation and Examples to know more.
+</div><br><br>
+<div class='exampleholder'>
+<span class='without'>
+The success alertbox code without vBocx.js.
+</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var vBocx = document.createElement('div');
+vBocx.innerHTML =  'I am vBocx.js success alert !';
+vBocx.style.height = 'auto';
+vBocx.style.width = '90%';
+vBocx.style.wordWrap = 'break-word';
+vBocx.id = 'vBocx';
+vBocx.className = 'vBocx' ;
+vBocx.style.fontSize = '18px';
+vBocx.style.position = 'absolute';
+vBocx.style.top = '10%';
+vBocx.style.transform = 'translateY(-10%)';
+vBocx.style.left = '50%';
+vBocx.style.transform = 'translateX(-50%)';
+vBocx.style.background = '#def0d8';
+vBocx.style.color = '#1A9022';
+vBocx.style.padding = '35px';
+vBocx.style.borderRadius = '3px';
+document.body.appendChild(alert);
+setTimeout(function ()
+{
+var child = document.getElementById('vBocx');
+document.body.removeChild(child)
+}, 3000);
+</code></pre>
+</div><br><br>
+<span class='with'>
+With vBocx.js<br>
+</span><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var successAlert = new vBocx();
+successAlert.alert({position:'top', type:'success', message:'I am vBocx.js success alert !', timer:3000});
+</code></pre>
+</div><br><br>
+</div>
+</div>
+<footer id='footer'>
+ <div id="cr">
+ 
+ </div>
+ </footer>
+</div>
+<script src='prism.js'></script>
+<script src='vBocxStyleLocale.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title class='notranslate'>vBocx.js - Documentation</title>
+<link href='prism.css' rel='stylesheet' />
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/vbocxjs.lib@1.0.2/dist/vbocx.css'>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/vbocxjs.lib@1.0.2/dist/vbocx.js'></script> 
+<link rel='stylesheet' href='vBocxStyleLocale.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<link rel='icon' href='logo.png'>
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class='main-body box-sdw-2' id='main-body'>
+<div class='top-menu trans-t-50 notranslate' id='top-menu'>
+<ul class='nav-links'>
+<li ><a class='gtgs' href='index.html'>Home</a></li>	
+<li ><a class='gtgs' href='gettingStarted.html'>Getting Started</a></li>
+<li ><a class='gtgs' href='https://bitbucket.org/varunbardwajp/vbocxjs/get/7fd402715701.zip' download>Download</a></li>
+<li><a class='gtgs' href='https://bitbucket.org/varunbardwajp/vbocxjs/src/master/' target='_blank'><i class='fa fa-bitbucket'></i></a></li>
+</ul>
+</div>
+<div class='header-white' id='header-white'>
+<div class='brand notranslate'>vBocx.<span>js</span></div>
+<div class='toogle' id='toogle'><i id='fa' class='fa fa-bars'></i></div>
+</div>
+
+<div class='holder'>
+<div class="docheading notranslate">Documentation</div>
+<ul class="notranslate">
+<li class="li"><a href="#alert" class="f-18 f-w fg-blue br-none clk-no-out" style="text-decoration: none;">Alerts.</a></li>
+<li class="li"><a href="#prompt" class="f-18 f-w fg-blue br-none  clk-no-out" style="text-decoration: none">Prompts.</a></li>
+<li class="li"><a href="#confirm" class="f-18 f-w fg-blue br-none  clk-no-out" style="text-decoration: none;">Confirm.</a></li>
+</ul><br><br><hr><br><br>
+Syntax,<br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var variable_name = new Vbocx();<br>
+variable_name.type({attributes});</code></pre></div><br><br>
+<hr><br><br>
+<section id="alert">
+
+<div class="f-25 f-w notranslate">Alert</div><br>
+<div class="desc">
+The <span class="notranslate">alert()</span> attributes are given below,
+</div><br><br>
+<ul>
+<li>
+<span class="f-w notranslate">position</span> - Alertbox to be placed<span class="notranslate">(top, middle, bottom).</span>
+</li><br>
+<li>
+<span class="f-w notranslate">type</span> - Type of alertbox<span class="notranslate">(success, warning, error).</span>
+</li><br>
+<li>
+<span class="f-w notranslate">id</span> - Id for alertBoxes.
+</li><br>
+<li>
+<span class="f-w notranslate">message</span> - Message to be displayed.
+</li><br>
+<li>
+<span class="f-w notranslate">timer</span> - Milliseconds you want alertbox on your screen<span class="notranslate">(in milliseconds:ms).</span>
+</li><br>
+</ul><br>
+The above given attributes are for default vBocx alertboxes.
+If you want customizable alertboxes of your own foreground, background and position, refer below attributes.<br><br><br>
+<ul>
+<li>
+<span class="f-w notranslate">position</span> - Alertbox to be placed<span class="notranslate">(% or px or pt).</span>
+</li><br>
+<li>
+<span class="f-w notranslate">id</span> - Id for alertBoxes.
+</li><br>
+<li>
+<span class="f-w notranslate">message</span> - Message to be displayed.
+</li><br>
+<li>
+<span class="f-w notranslate">color</span> - Color of message<span class="notranslate">(rgb() or hex or rgba()).</span>
+</li><br>
+<li>
+<span class="f-w notranslate">background</span> - Background-color of alertboxes<span class="notranslate">(rgb() or hex or rgba()).</span>
+</li><br>
+<li>
+<span class="f-w notranslate">timer</span> - Milliseconds you want alertbox on your screen<span class="notranslate">(in milliseconds:ms).</span>
+</li><br>
+</ul><br><br>
+You may notice that position, id, message and timer are common attributes in both default and customizable alertboxes.<br><br>
+If you dont want alertbox to be vanished after some milliseconds, you can omit the timer attribute and the resultant will a cancellable alert.<br><br>
+All the attributes should be placed between {  }(braces) which are treated as objects in JavaScript.<br><br>
+Take a look at the examples for better understanding,<br><br>
+You have to construct a vBocx constructor with new operator by assigning it to a variable and then make use of it for alerts, prompts and confirms as well.<br><br><br><br><hr><br><br>
+<span class="f-w f-22">Default alertboxes.</span><br><br>
+
+<span class="f-w f-15">Success alert,</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+//Default top success alert
+var myAlert = new Vbocx();
+myAlert.alert({position:'top', type:'success', id:"topAlert", message:'I am top success alert', timer:3000});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='topSuccess()'>Run example</button><span id='copy'></span><br><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+//Default middle success alert
+myAlert.alert({position:'middle', type:'success', id:"middleAlert", message:'I am middle success alert', timer:3000});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='middleSuccess()'>Run example</button><span id='copy'></span><br><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+//Default bottom success alert
+myAlert.alert({position:'bottom',  type:'success', id:"bottomAlert", message:'I am bottom success alert', timer:3000});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='bottomSuccess()'>Run example</button><span id='copy'></span><br><br><br><hr><br><br>
+
+
+<span class="f-w f-15">Warning alert,</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+//Default top warning alert
+var myAlert = new Vbocx();
+myAlert.alert({position:'top', type:'warning', id:"topAlert", message:'I am warning alert', timer:3000});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='topWarning()'>Run example</button><span id='copy'></span><br><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+//Default middle warning alert
+myAlert.alert({position:'middle', type:'warning', id:"middleAlert", message:'I am middle warning alert', timer:3000});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='middleWarning()'>Run example</button><span id='copy'></span><br><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+//Default bottom warning alert
+myAlert.alert({position:'bottom',  type:'warning', id:"bottomAlert", message:'I am bottom warning alert', timer:3000});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='bottomWarning()'>Run example</button><span id='copy'></span><br><br><br><hr><br><br>
+
+
+<span class="f-w f-15">Error alert,</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+//Default top error alert
+var myAlert = new Vbocx();
+myAlert.alert({position:'top', type:'error', id:"topAlert", message:'I am error alert', timer:3000});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='topError()'>Run example</button><span id='copy'></span><br><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+//Default middle error alert
+myAlert.alert({position:'middle', type:'error', id:"middleAlert", message:'I am middle error alert', timer:3000});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='middleError()'>Run example</button><span id='copy'></span><br><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+//Default bottom error alert
+myAlert.alert({position:'bottom',  type:'error', id:"bottomAlert", message:'I am bottom error alert', timer:3000});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='bottomError()'>Run example</button><span id='copy'></span><br><br><br><hr><br><br><br>
+
+
+
+
+
+<span class="f-w f-22">Customizable alertbox.</span><br><br><br>
+<span class="f-w f-18">Example 1</span><br><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+//Customizable alert
+var myAlert = new Vbocx();
+myAlert.alert({position:'18%', id:'customizedAlert', message:'I am customized alert', color:'white', background:'#1277db', timer:3000});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='customizedAlert()'>Run example</button><span id='copy'></span><br><br><br><br><br>
+
+
+<span class="f-w f-18">Example 2(Cancellable)</span><br><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+//Customizable alert
+var myAlert = new Vbocx();
+myAlert.alert({position:'38%', id:'cancellableAlert', message:'I am cancellable alert', color:'white', background:'#1277db'});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='cancellableAlert()'>Run example</button><span id='copy'></span><br><br><br><hr><br><br><br>
+
+</section>
+
+<section id="prompt">
+
+<div class="f-25 f-w notranslate">Prompt</div><br>
+<div class="desc">
+The <span class="notranslate">prompt()</span> attributes are given below,
+</div><br><br>
+<ul>
+<li>
+<span class="f-w notranslate">element</span> - Input or Select element.
+</li><br>
+<li>
+<span class="f-w notranslate">id</span> - Id of promptBoxes.
+</li><br>
+<li>
+<span class="f-w notranslate">header</span> - Message to be displayed.
+</li><br>
+<li>
+<span class="f-w notranslate">action</span> - Define your own function to be executed when user clicks on <span class="f-w notranslate">&#10004</span> button.
+</li><br>
+<li>
+<span class="f-w notranslate">animation</span> - Animation of promptBoxes(top-in-crash, bottom-in-crash, left-in-crash, right-in-crash).
+</li><br><br>Above are the common attributes.<br><br><br><hr><br><br>
+<li>
+<span class="f-w notranslate">type</span> - text, password, number, email, file, color, checkbox, radio, range, time, date, week, month are supported.
+</li><br>
+<li>
+<span class="f-w notranslate">value</span> - Value of type.
+</li><br>
+<li>
+<span class="f-w notranslate">placeholder</span> - Placeholder of type.
+</li><br>
+<li>
+<span class="f-w notranslate">required</span> - Type emptiness(true or false).
+</li><br>
+<li>
+<span class="f-w notranslate">checked</span> - Checkbox, Radio Button checked or unchecked(true or false).
+</li><br>
+<li>
+<span class="f-w notranslate">label</span> - Message to be displayed after Checkbox or Radio Button.
+</li><br>
+</ul><br>
+The above given attributes are for <span class="f-w notranslate">&ltinput&gt</span> tag promptBoxes.<br><br><br><hr><br>
+<ul><br>
+The attribute for <span class="f-w notranslate">&ltselect&gt</span> tag excluding common attributes is given below.<br><br>
+<li>
+<span class="f-w notranslate">options</span> - As name suggests its an array of options to be placed in select.
+</li><br>
+<br><hr><br><br><br>
+
+
+
+<span class="f-w f-20">Input promptbox.</span><br><br>
+You can change the type to any supported one as described in attributes section.<br><br>
+<span class="f-w f-15">Text prompt,</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var myPrompt = new Vbocx();
+myPrompt.prompt({element:"input", id:"textId", type:"text", header:"Enter your name", placeholder:"Input Here", animation:"bottom-in-crash", action:function(output){
+var alertBox = new Vbocx();
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"Your name : " + output, timer:2000});
+}});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='textPrompt()'>Run example</button><span id='copy'></span><br><br><br><br>
+
+
+In the above example when user inputs a text and clicks on <span class="f-w notranslate">&#10004</span> button the textbox value is accepted and stored. If you want make use of the value you have to declare a function using <br><br><span class="f-w notranslate">action:function(parameter){<br>
+some action.....<br>
+}</span><br><br>
+The parameter may be of any name you like.<br><br><br>
+
+<span class="f-w f-15">Password prompt,</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var myPrompt = new Vbocx();
+myPrompt.prompt({element:"input", id:"passId", type:"password", header:"Enter your password", placeholder:"Input Here", animation:"top-in-crash", action:function(output){
+var alertBox = new Vbocx();
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"Your password has been saved! ", timer:2000});
+}});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='passPrompt()'>Run example</button><span id='copy'></span><br><br><br><br>
+
+<span class="f-w f-15">Number prompt,</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var myPrompt = new Vbocx();
+myPrompt.prompt({element:"input", id:"numberId", type:"number", header:"Enter your Phone number", placeholder:"Input Here", animation:"bottom-in-crash", action:function(output){
+var alertBox = new Vbocx();
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"Your number is not matching! ", timer:2000});
+}});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='numPrompt()'>Run example</button><span id='copy'></span><br><br><br><br>
+
+
+<span class="f-w f-15">Email prompt,</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var myPrompt = new Vbocx();
+myPrompt.prompt({element:"input", id:"emailId", type:"email", header:"Enter your email-id", placeholder:"Input Here", animation:"top-in-crash", action:function(output){
+var alertBox = new Vbocx();
+if((/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/).test(output) === true){
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"Valid email-id", timer:2000});
+}
+else{
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"Invalid email-id", timer:2000});
+}
+}});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='emailPrompt()'>Run example</button><span id='copy'></span><br><br><br><br>
+
+<span class="f-w f-15">File prompt,</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var myPrompt = new Vbocx();
+myPrompt.prompt({element:"input", id:"fileId", type:"file", header:"Upload file",  animation:"left-in-crash", action:function(output){
+var alertBox = new Vbocx();
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"You choosed " + output, timer:2000});
+}});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='filePrompt()'>Run example</button><span id='copy'></span><br><br><br>
+
+
+<span class="f-w f-15">Color prompt,</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var myPrompt = new Vbocx();
+myPrompt.prompt({element:"input", id:"colorId", type:"color", header:"Choose your color",  animation:"bottom-in-crash", action:function(output){
+var alertBox = new Vbocx();
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"You choosed " + output, timer:2000});
+}});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='colorPrompt()'>Run example</button><span id='copy'></span><br><br><br>
+
+
+
+<span class="f-w f-15">Checkbox prompt,</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var myPrompt = new Vbocx();
+myPrompt.prompt({element:"input", id:"checkId", type:"checkbox", header:"Terms and conditions*", label:"Agree", animation:"bottom-in-crash", action:function(output){
+checked = document.getElementById("checkIdvBocxInput").checked ;
+if(checked == true){
+var alertBox = new Vbocx();
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"Thanks for choosing vBocx.js!", timer:2000});
+}
+else{
+var alertBox = new Vbocx();
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"Try again!", timer:2000});}}}); 
+</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='checkPrompt()'>Run example</button><span id='copy'></span><br><br><br>
+
+<span class="f-w f-15">Radio Button prompt,</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var myPrompt = new Vbocx();
+myPrompt.prompt({element:"input", id:"radioId", type:"radio", header:"Terms and conditions*", label:"Agree", animation:"top-in-crash", action:function(output){
+checked = document.getElementById("radioIdvBocxInput").checked ;
+if(checked == true){
+var alertBox = new Vbocx();
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"Thanks for choosing vBocx.js!", timer:2000});
+}
+else{
+var alertBox = new Vbocx();
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"Try again!", timer:2000});}}}); 
+</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='radioPrompt()'>Run example</button><span id='copy'></span><br><br><br>
+
+<span class="f-w f-15">Range prompt,</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var myPrompt = new Vbocx();
+myPrompt.prompt({element:"input", id:"rangeId", type:"range", header:"Select the range",  animation:"bottom-in-crash", action:function(output){
+var alertBox = new Vbocx();
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"The range was : " + output, timer:2000});
+}});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='rangePrompt()'>Run example</button><span id='copy'></span><br><br><br>
+
+<span class="f-w f-15">Time prompt,</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var myPrompt = new Vbocx();
+myPrompt.prompt({element:"input", id:"timeId", type:"time", header:"Select the time",  animation:"left-in-crash", action:function(output){
+var alertBox = new Vbocx();
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"Time : " + output, timer:2000});
+}});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='timePrompt()'>Run example</button><span id='copy'></span><br><br><br>
+
+<span class="f-w f-15">Date prompt,</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var myPrompt = new Vbocx();
+myPrompt.prompt({element:"input", id:"dateId", type:"date", header:"Select the date",  animation:"left-in-crash", action:function(output){
+var alertBox = new Vbocx();
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"Date : " + output, timer:2000});
+}});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='datePrompt()'>Run example</button><span id='copy'></span><br><br><br>
+
+<span class="f-w f-15">Week prompt,</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var myPrompt = new Vbocx();
+myPrompt.prompt({element:"input", id:"weekId", type:"week", header:"Select the week",  animation:"left-in-crash", action:function(output){
+var alertBox = new Vbocx();
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"Week : " + output, timer:2000});
+}});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='weekPrompt()'>Run example</button><span id='copy'></span><br><br><br>
+
+<span class="f-w f-15">Month prompt,</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var myPrompt = new Vbocx();
+myPrompt.prompt({element:"input", id:"monthId", type:"month", header:"Select the month",  animation:"top-in-crash", action:function(output){
+var alertBox = new Vbocx();
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"Month : " + output, timer:2000});
+}});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='monthPrompt()'>Run example</button><span id='copy'></span><br><br><br>
+
+
+<hr><br><br><br>
+<span class="f-w f-20">Select prompt,</span><br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var myPrompt = new Vbocx();
+promptBox.prompt({element:"select", id:"selectId", header:"Select your color", options:["Select", "Black", "White", "Red", "Blue"], animation:"left-in-crash", action:function(output){
+var alertBox = new Vbocx();
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"You selected " + output, timer:2000});
+}});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='selectPrompt()'>Run example</button><span id='copy'></span><br><br><br><hr><br><br><br><br>
+</section>
+
+<section id="confirm">
+
+<div class="f-25 f-w notranslate">Confirm</div><br>
+<div class="desc">
+The <span class="notranslate">confirm()</span> attributes are given below,
+</div><br><br>
+<ul>
+<li>
+<span class="f-w notranslate">id</span> - Id of promptBoxes.
+</li><br>
+<li>
+<span class="f-w notranslate">header</span> - Message to be displayed.
+</li><br>
+<li>
+<span class="f-w notranslate">animation</span> - Animation of promptBoxes(top-in-crash, bottom-in-crash, left-in-crash, right-in-crash).
+</li><br>
+<li>
+<span class="f-w notranslate">action</span> - Define your own function to be executed when user clicks on <span class="f-w notranslate">&#10004</span> button.
+</li><br>
+</ul><br><br>
+Lets take a look at an example,<br><br>
+<div class='notranslate codes'>
+<pre><code class='language-js'>
+var myConfirm = new Vbocx();
+myConfirm.confirm({id:"confirmId", header:"Do you want to quit?", animation:"right-in-crash", action:function(){
+var alertBox = new Vbocx();
+alertBox.alert({position:"top", type:"success", id:"alertId", message:"Thanks for using vBocx.js", timer:2000});
+}});</code></pre></div><br>
+<button class='runex btn-blue pd-10 pd-l-26 pd-r-26 txt-sdw-2 br-none clk-no-out fg-white rad-4' onclick='lastConfirm()'>Run example</button><span id='copy'></span><br><br><br><hr><br><br><br>
+</section>
+For further customization use following respective IDs(#) in CSS.<br><br><br>
+
+<span class="f-w f-23">
+Alert
+</span><br><br><br>
+<span class="f-w f-18">
+alert box 
+</span>- ID(id) provided in the attributes list (Eg: myAlert)<br><br><br><hr><br><br>
+
+<span class="f-w f-23">
+Prompt
+</span> <br><br><br>
+<span class="f-w f-18">
+prompt box 
+</span>- ID(id) provided in the attributes list + vBocx (Eg: myPromptvBocx)<br><br>
+<span class="f-w f-18">
+header
+</span>- ID(id) provided in the attributes list + Header (Eg: myPromptHeader)<br><br>
+<span class="f-w f-18">
+input
+</span>- ID(id) provided in the attributes list + vBoxInput (Eg: myPromptvBoxInput)<br><br>
+<span class="f-w f-18">
+&#10004  button
+</span>- ID(id) provided in the attributes list + Ok (Eg: myPromptOk)<br><br>
+<span class="f-w f-18">
+&#10008  button
+</span>- ID(id) provided in the attributes list + Cancel (Eg: myPromptCancel)<br><br><br><hr><br><br>
+<span class="f-w f-23">
+Confirm
+</span> <br><br><br>
+<span class="f-w f-18">
+confirm box 
+</span>- ID(id) provided in the attributes list + vBocx (Eg: myConfirmvBocx)<br><br>
+<span class="f-w f-18">
+header
+</span>- ID(id) provided in the attributes list + Header (Eg: myConfirmHeader)<br><br>
+<span class="f-w f-18">
+&#10004  button
+</span>- ID(id) provided in the attributes list + Ok (Eg: myConfirmOk)<br><br>
+<span class="f-w f-18">
+&#10008  button
+</span>- ID(id) provided in the attributes list + Cancel (Eg: myConfirmCancel)<br><br><br><hr><br><br><br>
+<span class="f-w f-18">
+Note: 
+</span>You should insert !important in every style.<br><br>
+Example,<br><br>
+<div class='notranslate codes'>
+<pre><code class='language-css'>
+#topAlert{
+width:50% !important;
+color:white !important;
+background:green !important;
+}
+</code></pre></div><br><br>
+</div><br><br>
+
+<footer id='footer'>
+<div id="cr">
+
+</div>
+</footer>
+</div>
+</div>
+
+
+<script src='prism.js'></script>
+<script src='vBocxStyleLocale.js'></script>
+</body>
+</html>
